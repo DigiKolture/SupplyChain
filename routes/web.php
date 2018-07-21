@@ -41,4 +41,8 @@ Route::group(['namespace'=>'Admin', 'prefix'=>'admin'], function() {
 
     Route::resource('/permission', 'PermissionController');
 
+    Route::resource('/project', 'ProjectController');
+
+
+
 });

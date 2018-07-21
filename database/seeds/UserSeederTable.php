@@ -13,11 +13,21 @@ class UserSeederTable extends Seeder
     public function run()
     {
         //
-        DB::table('permissions')->insert([
+        DB::table('admins')->insert([
             'name' => 'Adebayo',
             'email' => 'ade@gmail.com',
+            'phone' => '0802457845',
             'password' => bcrypt('ade123'),
-            'created_at' => time()
+            'status' => 1,
+            'photo_id' => 1,
+            'created_at' => now(),
+        ]);
+
+        DB::table('photos')->insert([
+            'id' => 1,
+            'name' => '1529932498avatar.png',
+            'created_at' => now()
+
         ]);
 
     }

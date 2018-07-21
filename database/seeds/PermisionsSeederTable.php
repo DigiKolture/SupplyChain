@@ -15,28 +15,33 @@ class PermisionsSeederTable extends Seeder
         //
         DB::table('permissions')->insert([
             'name' => 'CreateUsers',
+            'guard_name' => 'admin',
             'for' => 'user',
-            'created_at' => time()
+            'created_at' => now()
         ]);
         DB::table('permissions')->insert([
             'name' => 'EditUsers',
+            'guard_name' => 'admin',
             'for' => 'user',
-            'created_at' => time()
+            'created_at' => now()
         ]);
         DB::table('permissions')->insert([
             'name' => 'DeleteUsers',
+            'guard_name' => 'admin',
             'for' => 'user',
-            'created_at' => time()
+            'created_at' => now()
         ]);
         DB::table('permissions')->insert([
             'name' => 'RoleCRUD',
+            'guard_name' => 'admin',
             'for' => 'other',
-            'created_at' => time()
+            'created_at' => now()
         ]);
         DB::table('permissions')->insert([
             'name' => 'PermissionCRUD',
+            'guard_name' => 'admin',
             'for' => 'other',
-            'created_at' => time()
+            'created_at' => now()
         ]);
     }
 }
